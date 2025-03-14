@@ -11,4 +11,4 @@ RUN apt -qq install -y git python3 ffmpeg python3-pip
 RUN git clone https://github.com/rooted-cyber/Zee5-Downloader-1
 RUN cd Zee*;pip3 install --no-cache-dir -r requirements.txt
 
-RUN bash start.sh
+RUN cd Zee*;bash start.sh
