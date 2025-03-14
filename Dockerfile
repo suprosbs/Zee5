@@ -7,7 +7,8 @@ ENV TZ=Asia/Kolkata
 
 RUN apt -qq install -y git python3 ffmpeg python3-pip
 
-COPY requirements.txt .
-RUN pip3 install --no-cache-dir -r requirements.txt
-COPY . .
+
+RUN git clone https://github.com/rooted-cyber/Zee5-Downloader-1
+RUN cd Zee*;pip3 install --no-cache-dir -r requirements.txt
+
 RUN bash start.sh
